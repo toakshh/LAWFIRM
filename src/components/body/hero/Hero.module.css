@@ -14,7 +14,7 @@
 .text h1 {
     color: var(--ligth);
     font-family: inherit;
-    font-size: clamp(20px, 4dvw, 50px);
+    font-size: clamp(25px, 4dvw, 50px);
     font-weight: 500;
     line-height: 147.523%;
 }
@@ -87,5 +87,12 @@
         width: 100%;
         justify-content: center;
         margin-top: 30px;
+    }
+    .text > *{
+        padding: 10px 0;
+    }
+    .form{
+        justify-content: center;
+        width: 100%;
     }
   }
