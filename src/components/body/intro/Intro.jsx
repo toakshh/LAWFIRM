@@ -30,7 +30,6 @@ const Intro = () => {
 
         <CustomDivider orientation='vertical' sx={{
             '@media (max-width: 600px)': {
-                
                 width: '100%',
                 height: '1px'
               },
@@ -44,7 +43,7 @@ const Intro = () => {
         }}}>
                 Criminal Lawyer
             </Typography>
-            <Typography sx={{opacity: '0.3','@media (max-width: 600px)':{
+            <Typography sx={{opacity: '0.3', fontSize:'18px','@media (max-width: 600px)':{
             fontSize: '3vw', 
         }}}>
             Amet minim mollit non deserunt ullamco est
