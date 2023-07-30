@@ -40,6 +40,7 @@ const Intro = () => {
         } }}>
             <Typography variant='h4' sx={{'@media (max-width: 600px)':{
             fontSize: '6vw', 
+            textAlign:'center',
         }}}>
                 Criminal Lawyer
             </Typography>

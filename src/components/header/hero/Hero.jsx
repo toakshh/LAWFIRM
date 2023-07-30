@@ -1,5 +1,5 @@
 import style from "./Hero.module.css";
-import person from "../../../assets/svg/HeroBanner.svg"
+import person from "../../../assets/svg/Heroimg.svg"
 const Hero = () => {
   return (
     <div className={style.heroMain}>

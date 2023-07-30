@@ -25,6 +25,7 @@
     opacity: 0.30000001192092896;
     font-size: clamp(10px,2vw, 16px);
     font-weight: 500;
+    max-width: 400px;
 }
 
 .form{
@@ -37,13 +38,16 @@
 }
 .email{
     background-color: #292929;
-    color: #545454;
+    color: var(--theme);
     border-radius: 43px;
     padding:   1rem 0 1rem 1rem;
     width: 100%;
     border: none;
     outline: 4px solid #292929;
     font-size: clamp(10px,2vw, 16px);
+}
+.email::placeholder{
+    color: #545454;
 }
 .button{
     position: absolute;
@@ -66,14 +70,12 @@
   }
   
   .header__img img {
-    width: 80%;
-    border-radius: 55px;
+    width: 100%;
   }
   
   @media only screen and (max-width: 824px) {
     .heroMain{
         flex-direction: column;
-        height: 100%;
     }
     .header__img{
         order: 1;
@@ -85,10 +87,11 @@
     .text{
         order: 2;
         width: 100%;
-        justify-content: center;
+        align-items: center;
         margin-top: 30px;
     }
     .text > *{
+        text-align: center;
         padding: 10px 0;
     }
     .form{
