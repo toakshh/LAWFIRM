@@ -1,4 +1,8 @@
 .responsiveImg{
     width: 100%;
     height: 100%;
+    transition: all .2s ease-in;
+}
+.responsiveImg:hover{
+    filter: brightness(1.4);
 }

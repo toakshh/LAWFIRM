@@ -1,50 +1,28 @@
-import { Box, Container, Typography, Card, CardActionArea, CardContent, Button, CardMedia } from "@mui/material";
-
+import { Box, Container, Typography, } from "@mui/material";
+import CardItem from "./CardItem";
 import cardGift from "../../../assets/svg/cardGift.svg";
-import styled from "styled-components";
-
-
-
 const Cards = () => {
     const cardData = [
         {
+            img: cardGift,
             id: "isroet-stoei",
-            success: "98",
+            success: "98% success rate",
             para: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia onsequatduis enim velit mollit Exer."
         },
         {
+            img: cardGift,
             id: "tsoiea-oitna",
-            success: "100",
+            success: "100% success rate",
             para: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia onsequatduis enim velit mollit Exer."
         },
         {
+            img: cardGift,
             id: "sietn-stinie",
-            success: "100",
+            success: "100% success rate",
             para: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia onsequatduis enim velit mollit Exer."
         }
     ]
-    const CustomButton = styled(Button)({
-        marginTop:'15px !important',
-        color:"black !important",
-        fontweight: '600 !important',
-        boxShadow: 'none !important' ,
-        textTransform: 'none !important' ,
-        fontSize: '14 !important'  ,
-        padding: '6px 12px !important' ,
-        border: 'none !important' ,
-        lineHeight: '1.5 !important' ,
-        borderRadius:'20px !important' ,
-        backgroundColor: 'var(--theme) !important' ,
-        '&:hover': {
-          backgroundColor: 'black !important' ,
-          border: '1px solid white !important' ,
-          color:"white !important" 
-        },
-        '&:active': {
-          backgroundColor: 'black !important' ,
-          borderColor: 'blue !important' ,
-        },
-      });
+    
     return (
         <Box sx={{
             display: 'flex',
@@ -65,26 +43,9 @@ const Cards = () => {
                 {
                     cardData.map(item => {
                         return (
-                            <Card key={item.id} sx={{display:'flex', flexDirection:'column',justifyContent:'flex-start', backgroundColor: 'transparent', borderRadius: '14px', border: '1.4px solid #4c4c4c', padding: '15px', width: '300px', color: "white",margin:'14px',flexShrink:'0',}}>
-
-                                <CardActionArea>
-                                    <CardMedia
-                                        component="img"
-                                        sx={{ height: '60px', width: '60px' }}
-                                        image={cardGift}
-                                        alt="card logo"
-                                    />
-                                    <CardContent>
-                                        <Typography gutterBottom variant="h5" component="div">
-                                            {item.success}% Success Rate
-                                        </Typography>
-                                        <Typography variant="body2" sx={{ opacity: '0.3' }}>
-                                            {item.para}
-                                        </Typography>
-                                        <CustomButton variant="contained">Read More</CustomButton>
-                                    </CardContent>
-                                </CardActionArea>
-                            </Card>
+                            <div key={item.id}>
+                                <CardItem intro item={item}/>
+                            </div>
                         )
                     })
                 }
