@@ -12,7 +12,7 @@ const Intro = () => {
     <Box sx={{  display:'flex',
                 alignItems: 'center',
                 justifyContent: 'space-between',
-                margin: '5vw',
+                margin: '5vw 8vw',
                 '@media (max-width: 600px)':{
                     flexDirection:'column',
                     margin: '5vh 5vw',
