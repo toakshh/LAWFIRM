@@ -4,6 +4,7 @@ import Clients from './components/body/clients/Clients'
 import Faq from './components/body/faq/Faq'
 import Gallery from './components/body/gallery/Gallery'
 import Intro from './components/body/intro/Intro'
+import Subscribe from './components/body/subscribe/Subscribe'
 import Team from './components/body/team/Team'
 import Header from './components/header/Header'
 
@@ -20,6 +21,7 @@ function App() {
       <Clients />
       <Team />
       <Faq />
+      <Subscribe />
     </>
   )
 }

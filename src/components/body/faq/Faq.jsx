@@ -7,7 +7,7 @@ import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import { useState } from "react";
 
 const Faq = () => {
-  const [expanded, setExpanded] = useState('one');
+  const [expanded, setExpanded] = useState();
 
   const Accordion = styled((props) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -16,7 +16,7 @@ const Faq = () => {
     justifyContent: 'center',
     flexDirection: 'column',
     backgroundColor: 'transparent',
-    padding:'30px',
+    padding: '30px',
     color: 'white',
     '&:not(:last-child)': {
       borderBottom: '2px solid #ffffff08',
@@ -25,7 +25,7 @@ const Faq = () => {
 
   const AccordionSummary = styled((props) => (
     <MuiAccordionSummary
-      expandIcon={<AddRoundedIcon sx={{ fontSize: '2rem', backgroundColor: 'var(--theme)', borderRadius: '50%', color: 'black' }} />}
+      expandIcon={<AddRoundedIcon sx={{ fontSize: '2rem', backgroundColor: 'var(--theme)', borderRadius: '50%', color: 'black',margin:"9px" }} />}
       {...props}
     />
   ))(({
@@ -40,28 +40,28 @@ const Faq = () => {
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
-  const accData= [{
-    id:"random-rts",
+  const accData = [{
+    id: "random-rts",
     question: "Do I need a personal injury report?",
     answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat reprehenderit rerum maiores modi dolorum tenetur ab sit quos? Harum praesentium voluptatum hic."
   },
   {
-    id:"random-ffpf",
+    id: "random-ffpf",
     question: "How much is my case worth?  ",
     answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat reprehenderit rerum maiores modi dolorum tenetur ab sit quos? Harum praesentium voluptatum hic."
   },
   {
-    id:"random-asta",
+    id: "random-asta",
     question: "What should I do right after car accidect",
-    answer:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat reprehenderit rerum maiores modi dolorum tenetur ab sit quos? Harum praesentium voluptatum hic.",
+    answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat reprehenderit rerum maiores modi dolorum tenetur ab sit quos? Harum praesentium voluptatum hic.",
   },
   {
-    id:"random-htdsrt",
+    id: "random-htdsrt",
     question: "How much is my case worth?",
     answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat reprehenderit rerum maiores modi dolorum tenetur ab sit quos? Harum praesentium voluptatum hic.",
   },
- 
-]
+
+  ]
 
   return (
     <Box sx={{
@@ -85,25 +85,26 @@ const Faq = () => {
           width: '100%'
         }
       }}>
-          {
-            accData.map(each=>{
-              return (
-                <Accordion key={each.id} expanded={expanded === each.id} onChange={handleChange(each.id)}>
-              <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-              <Typography sx={{
-                fontWeight: '600',
-                fontSize: '24px',
-              }}>{each.question}</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography sx={{fontsize:'18px', fontWeight:'500',opacity:'0.3'}}>
-                {each.answer}
-              </Typography>
-            </AccordionDetails>
-        </Accordion>
+        {
+          accData.map(each => {
+            return (
+              <Accordion sx={{'@media (max-width:600px)':{padding:'5px'}}} key={each.id} expanded={expanded === each.id} onChange={handleChange(each.id)}>
+                <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
+                  <Typography sx={{
+                    fontWeight: '600',
+                    fontSize: '24px',
+                    '@media (max-width:550px)':{fontSize:'15px'},
+                  }}>{each.question}</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography sx={{ fontsize: '18px', fontWeight: '500', opacity: '0.3','@media (max-width:550px)':{fontSize:'12px'}, }}>
+                    {each.answer}
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
             )
-            })
-          }
+          })
+        }
 
       </Container>
     </Box>
