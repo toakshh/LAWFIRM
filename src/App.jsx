@@ -6,6 +6,7 @@ import Gallery from './components/body/gallery/Gallery'
 import Intro from './components/body/intro/Intro'
 import Subscribe from './components/body/subscribe/Subscribe'
 import Team from './components/body/team/Team'
+import Footer from './components/footer/Footer'
 import Header from './components/header/Header'
 
 
@@ -22,6 +23,7 @@ function App() {
       <Team />
       <Faq />
       <Subscribe />
+      <Footer />
     </>
   )
 }

@@ -1,7 +1,7 @@
 import { Card, CardActionArea, CardContent, Typography, CardMedia, Button } from '@mui/material'
-
 import styled from "styled-components";
 import PropTypes from 'prop-types';
+
 const CardItem = ({ item,intro }) => {
 
     const CustomButton = styled(Button)({
