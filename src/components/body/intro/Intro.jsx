@@ -1,13 +1,13 @@
 import { Box,Typography, Container,Divider } from '@mui/material'
 // import style from './Intro.module.css'
 import styled from 'styled-components';
-
+const CustomDivider= styled(Divider)({
+    background: 'grey',
+})
 
 const Intro = () => {
 
-    const CustomDivider= styled(Divider)({
-        background: 'grey',
-    })
+ 
   return (
     <Box sx={{  display:'flex',
                 alignItems: 'center',

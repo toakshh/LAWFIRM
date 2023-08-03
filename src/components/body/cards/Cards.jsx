@@ -44,7 +44,7 @@ const Cards = () => {
                     cardData.map(item => {
                         return (
                             <div key={item.id}>
-                                <CardItem intro item={item}/>
+                                <CardItem intro={true} item={item}/>
                             </div>
                         )
                     })

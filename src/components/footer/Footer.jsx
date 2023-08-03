@@ -11,7 +11,7 @@ const Footer = () => {
             gap:'50px'
         }}}>
             <Logo />
-            <Navigation footer/>
+            <Navigation footer={true}/>
             <Socials />
         </Container>
         <Container sx={{

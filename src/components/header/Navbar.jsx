@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <nav className={styles.navbarMain}>
       <Logo />
-      <Navigation />
+      <Navigation footer={false}/>
       <Button />
     </nav>
     

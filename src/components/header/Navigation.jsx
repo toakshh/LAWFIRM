@@ -19,7 +19,7 @@ const Navigation = ({footer}) => {
   )
 }
 Navigation.propTypes= {
-  footer: PropTypes.boolean,
+  footer: PropTypes.bool,
 }
 
 export default Navigation
